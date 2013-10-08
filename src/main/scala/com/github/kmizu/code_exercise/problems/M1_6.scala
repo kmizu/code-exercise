@@ -1,6 +1,6 @@
 package com.github.kmizu.code_exercise.problems
 
-object M1_6 extends App {
+object M1_6 {
   def solveNaive(a: Int*): Int = {
     val n = a.length
     var answer = 0
@@ -14,7 +14,5 @@ object M1_6 extends App {
   }
 
 
-  assert(solveNaive(2, 3, 4, 5, 10) == 12, "answer should be 12")
-  assert(solveNaive(4, 5, 10, 20) == 0, "there should be no answer")
 
 }
