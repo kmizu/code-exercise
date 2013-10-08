@@ -1,0 +1,8 @@
+.DS_Store
+target/
+project/project/
+boot/
+.idea/
+.idea_modules/
+lib_managed/
+src_managed/
