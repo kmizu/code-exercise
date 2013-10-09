@@ -17,4 +17,9 @@ class M1_6UnitSpec extends FlatSpec {
     assertResult(solveNaive(2, 3, 4, 5, 10))(solveFunctional(2, 3, 4, 5, 10))
     assertResult(solveNaive(4, 5, 10, 20))(solveFunctional(4, 5, 10, 20))
   }
+
+  "solveEfficiently" should "returns the same value with solveNaive" in {
+    assertResult(solveNaive(4, 5, 10, 20))(solveEfficiently(4, 5, 10, 20))
+    assertResult(solveNaive(4, 5, 10, 20))(solveEfficiently(4, 5, 10, 20))
+  }
 }

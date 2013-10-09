@@ -25,5 +25,18 @@ object M1_6 {
     }
   }
 
+  def solveEfficiently(a: Int*): Int = {
+    val dsc = a.sortBy(x => -x).zipWithIndex
+    val n = dsc.length
+    val result = dsc.map{ case (mx, i) =>
+      if(i >= n - 2) {
+        0
+      } else {
+        val rest = dsc(i + 1)._1 + dsc(i + 2)._1
+        if (mx < rest) mx + rest else 0
+      }
+    }
+    result.find(_ > 0).getOrElse(0)
+  }
 
 }
