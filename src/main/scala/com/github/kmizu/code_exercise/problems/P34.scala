@@ -18,10 +18,11 @@ class P34 {
     (1 to k).foreach{i => ans(i) = -1}
     breakable {
       for (v <- nums) {
-        for (j <- Range(k, -1, -1) if ans(j) != -1) {
-          val x = j + v
-          if (x <= k && ans(x) == -1) ans(x) = v
-        }
+        for {
+          j <- Range(k, -1, -1)
+          x = j + v
+          if ans(j) != -1 && x <= k && ans(x) == -1
+        } ans(x) = v
         if (ans(k) != -1) {
           break()
         }
