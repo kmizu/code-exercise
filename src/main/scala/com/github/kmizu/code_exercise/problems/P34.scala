@@ -6,4 +6,9 @@ class P34 {
       as.combinations(i).toSeq.exists{_.sum == k}
     }
   }
+
+  def solve(k: Int, as: Seq[Int]): Boolean = {
+    val bs = as.filter{_ <= k}.sorted
+    ???
+  }
 }
