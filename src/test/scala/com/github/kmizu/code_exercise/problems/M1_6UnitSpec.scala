@@ -1,9 +1,10 @@
 package com.github.kmizu.code_exercise.problems
 
 import org.scalatest._
-import M1_6._
 
 class M1_6UnitSpec extends FlatSpec {
+  val S = new M1_6
+  import S._
 
   "M1_6" should "have answer in some inputs" in {
     assertResult(12)(solveNaive(2, 3, 4, 5, 10))

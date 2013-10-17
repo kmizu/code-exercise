@@ -1,6 +1,6 @@
 package com.github.kmizu.code_exercise.problems
 
-object M1_6 {
+class M1_6 {
   def solveNaive(a: Int*): Int = {
     val n = a.length
     var answer = 0
