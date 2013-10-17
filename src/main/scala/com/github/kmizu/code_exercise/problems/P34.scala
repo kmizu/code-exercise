@@ -13,23 +13,13 @@ class P34 {
   def solve(k: Int, as: Seq[Int]): Boolean = {
     val nums = as.sorted.toArray
 
-    val ans = Array.ofDim[Int](k + 1)
+    val ans = Array.fill(k + 1)(-1)
     ans(0) = 0
-    (1 to k).foreach{i => ans(i) = -1}
-    breakable {
-      for (v <- nums) {
-        for {
-          j <- Range(k, -1, -1)
-          x = j + v
-          if ans(j) != -1 && x <= k && ans(x) == -1
-        } ans(x) = v
-        if (ans(k) != -1) {
-          break()
-        }
-
-      }
+    nums.exists{v =>
+      for (
+        j <- Range(k, -1, -1); x = j + v; if ans(j) != -1 && x <= k && ans(x) == -1
+      ) ans(x) = v
+      ans(k) != -1
     }
-
-    ans(k) != -1
   }
 }
