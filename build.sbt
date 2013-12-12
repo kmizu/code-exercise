@@ -8,7 +8,7 @@ scalaVersion := "2.10.3"
 
 libraryDependencies ++= Seq(
   "junit" % "junit" % "4.7" % "test",
-  "org.scalatest" % "scalatest_2.10" % "2.0.RC1" % "test"
+  "org.scalatest" % "scalatest_2.10" % "2.0" % "test"
 )
 
 initialCommands in console += {
