@@ -1,7 +1,5 @@
 package com.github.kmizu.code_exercise.problems
 
-import scala.util.control.Breaks._
-import scala.collection.mutable
 
 class P34 {
   def solveNaive(k: Int, as: Seq[Int]): Boolean = {
