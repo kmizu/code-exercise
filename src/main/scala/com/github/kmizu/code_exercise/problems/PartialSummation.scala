@@ -9,7 +9,7 @@ class PartialSummation {
    * @param k -10^8 <= k <= 10^8
    * @return integer set, summation of its elements is k if there is k, empty set otherwise
    */
-  def solveNaive(a: Seq[Int], k: Int): Set[Int] =  {
+  def solve(a: Seq[Int], k: Int): Set[Int] =  {
     val cs: IndexedSeq[(Set[Int], Int)] = (0 to a.length).flatMap{i => a.combinations(i).map{x => (x.toSet[Int], x.sum) }}
     val answers = cs.filter{ case (_, sum) => sum == k}.toList
     answers match {
