@@ -7,10 +7,10 @@ class PartialSumUnitSpec extends FlatSpec {
   import S._
 
   "PartialSum#solve" should "return non-empty integer set for the following input" in {
-    assertResult(Set(2, 4, 7))(solve(4, Seq(1 ,2, 4, 7), 13))
+    assertResult(Set(2, 4, 7))(solveNaive(Seq(1 ,2, 4, 7), 13))
   }
 
   "PartialSum#solve" should "return empty integer set for the following input" in {
-    assertResult(Set())(solve(4, Seq(1 ,2, 4, 7), 15))
+    assertResult(Set())(solveNaive(Seq(1 ,2, 4, 7), 15))
   }
 }
