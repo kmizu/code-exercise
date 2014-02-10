@@ -6,7 +6,7 @@ class PartialSumUnitSpec extends FlatSpec {
   val S = new PartialSummation
   import S._
 
-  "PartialSum#solve" should "return non-empty integer set for the following input" in {
+  "CoinCounting#solve" should "should return the following resultnput" in {
     assertResult(Set(2, 4, 7))(solve(Seq(1 ,2, 4, 7), 13))
   }
 
