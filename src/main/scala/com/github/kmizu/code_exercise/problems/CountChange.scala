@@ -3,7 +3,7 @@ package com.github.kmizu.code_exercise.problems
 /**
  * @author Kota Mizushima
  */
-class CoinCounting {
+class CountChange {
   sealed abstract class Coin
   case object C001
   case object C005
