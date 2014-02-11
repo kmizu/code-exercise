@@ -1,5 +1,7 @@
 package com.github.kmizu.code_exercise.problems
 
+import scala.collection.mutable
+
 /**
  * @author Kota Mizushima
  */
@@ -12,7 +14,10 @@ class CountChange {
   case object C100 extends Coin(100)
   case object C500 extends Coin(500)
 
+  private def sum(values: Map[Coin, Int]): Int = values.foldLeft(0){case (acc,(c, v)) => acc + c.value * v}
+
   def solve(amount: Int, constraints: Map[Coin, Int]): (Int, Map[Coin, Int]) = {
+    val table = mutable.Map[Int, Int]()
     ???
   }
 }
