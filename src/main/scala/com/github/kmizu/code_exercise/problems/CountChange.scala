@@ -13,5 +13,6 @@ class CountChange {
   case object C500 extends Coin(500)
 
   def solve(amount: Int, constraints: Map[Coin, Int]): (Int, Map[Coin, Int]) = {
+    ???
   }
 }
