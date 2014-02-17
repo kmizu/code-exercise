@@ -38,7 +38,9 @@ class CountChange {
     table(0) = Nil
     def solveMain(a: Int, cs: List[(Coin, Int)]): Option[List[(Coin, Int)]] = cs match {
       case Nil =>
-        if (a == 0) table(a) = Nil
+        if (a == 0) {
+          table(a) = Nil
+        }
         table.get(a)
       case ((c, n))::xs =>
         for (m <- Range(n, -1, -1)) {

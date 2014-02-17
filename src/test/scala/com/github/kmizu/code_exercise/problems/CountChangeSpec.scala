@@ -11,6 +11,6 @@ class CountChangeSpec extends FlatSpec {
   }
 
   "CountChange#solveByDP" should "return the following result" in {
-    assertResult(Some(List(C500 -> 3, C050 -> 1, C010 -> 1)))(solveByDP(1560, List(C001 -> 5, C005 -> 5, C010 -> 5, C050 -> 5, C100 -> 5, C500 -> 4)))
+    assertResult(Some(List(C500 -> 2, C100 -> 2, C010 -> 2)))(solveByDP(1220, List(C001 -> 5, C005 -> 0, C010 -> 5, C050 -> 0, C100 -> 5, C500 -> 3)))
   }
 }
