@@ -17,6 +17,7 @@ class CountChange {
 
   private def sum(values: List[(Coin, Int)]): Int = values.foldLeft(0){case (acc,(c, v)) => acc + c.value * v}
 
+  /*
   def solve(amount: Int, coins: List[(Coin, Int)]): Option[List[(Coin, Int)]] = {
     def solveNaive(a: Int, cs: List[(Coin, Int)]): Option[List[(Coin, Int)]] = cs match {
       case Nil =>
@@ -31,5 +32,11 @@ class CountChange {
         None
     }
     solveNaive(amount, coins.sortBy{case (c, n) => - c.value}).map{_.filter(_._2 > 0)}
+  }
+  */
+
+  def solve(amount: Int, coins: List[(Coin, Int)]): Option[List[(Coin, Int)]] = {
+    val table = mutable.Map[Int, List[(Coin, Int)]]
+    def solveByDP(a: Int, cs: List[(Coin, Int)]): Option[List[(Coin, Int)]] = ???
   }
 }
