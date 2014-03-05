@@ -6,7 +6,7 @@ import scala.collection.immutable._
 /**
  * @author Kota Mizushima
  */
-class CountChange {
+class CoinProblem {
   sealed abstract class Coin(val value: Int)
   case object C001 extends Coin(1)
   case object C005 extends Coin(5)
