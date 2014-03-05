@@ -44,13 +44,20 @@ class CountChange {
         table.get(a)
       case ((c, n))::xs =>
         for (m <- Range(n, -1, -1)) {
-          solveMain(a - c.value * m, xs) match {
-            case Some(answer) => return Some((c, m)::answer)
-            case _ =>
+          table.get(a) match {
+            case result@(Some(_)) => return result
+            case None =>
+              solveMain(a - c.value * m, xs) match {
+                case Some(answer) =>
+                  val result = (c, m)::answer
+                  table(a) = result
+                  return Some(result)
+                case None =>
+              }
           }
         }
         None
     }
-    solveMain(amount, coins.sortBy{case (c, n) => - c.value}).map{_.filter(_._2 > 0)}
+    solveMain(amount, coins.sortBy{ case (c, n) => - c.value }).map{_.filter(_._2 > 0)}
   }
 }
